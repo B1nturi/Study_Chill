@@ -10,4 +10,7 @@
     <color name="pink_500">#EC4899</color>
     <color name="pink_600">#DB2777</color>
     <color name="pink_800">#9D174D</color>
+    <color name="pink_light">#FBCFE8</color>
+    <color name="pink_primary">#EC4899</color>
+    <color name="pink_dark">#9D174D</color>
 </resources>
