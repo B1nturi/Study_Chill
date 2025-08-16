@@ -201,12 +201,13 @@
             android:textSize="14sp"
             android:layout_marginBottom="8dp"/>
 
-        <TextView
-            android:id="@+id/signUpButton"
+        <Button
+            android:id="@+id/btnSignUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="🌱 Sign Up"
-            android:textColor="#DB2777"
+            android:backgroundTint="#EC4899"
+            android:textColor="#FFFFFF"
             android:textSize="14sp"
             android:textStyle="bold"/>
     </LinearLayout>
