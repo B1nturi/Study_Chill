@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StudyChill">
         <activity
+            android:name=".TimerActivity"
+            android:exported="false" />
+        <activity
             android:name=".SignupActivity"
             android:exported="false" />
         <activity
@@ -29,6 +32,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity_timer"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
