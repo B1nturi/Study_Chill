@@ -7,8 +7,6 @@
     android:padding="16dp">
 
     <!-- Back Button -->
-
-    <!-- Main Content -->
     <Button
         android:id="@+id/backButton"
         android:layout_width="wrap_content"
@@ -21,6 +19,7 @@
         android:textColor="#DB2777"
         android:textSize="30sp" />
 
+    <!-- Main Content -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
