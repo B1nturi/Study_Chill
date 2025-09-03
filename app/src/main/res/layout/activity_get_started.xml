@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F2D2BD"
+    android:background="@color/mint"
     android:padding="16dp">
 
     <!-- Main Content -->
@@ -33,7 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Study Chill"
-                android:textColor="#c93867"
+                android:textColor="@color/black"
                 android:textSize="36sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp"/>
@@ -42,7 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Focus • Relax • Vibe 🎵"
-                android:textColor="#c93867"
+                android:textColor="@color/black"
                 android:textSize="18sp"/>
         </LinearLayout>
 
@@ -52,9 +52,9 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="32dp"
             app:cardCornerRadius="24dp"
-            app:cardBackgroundColor="#FFE6EA"
+            app:cardBackgroundColor="@color/green"
             app:cardElevation="4dp"
-            android:backgroundTint="#FFE6EA">
+            android:backgroundTint="@color/green">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -68,7 +68,7 @@
                     android:layout_height="wrap_content"
                     android:text="Welcome!"
                     android:textStyle="bold"
-                    android:textColor="#c93867"
+                    android:textColor="@color/black"
                     android:textSize="30sp"
                     android:layout_marginBottom="16dp"/>
 
@@ -77,7 +77,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Join thousands of students who've transformed their study habits with our lofi-approved focus techniques."
-                    android:textColor="#c93867"
+                    android:textColor="@color/black"
                     android:textSize="14sp"
                     android:layout_marginBottom="24dp"
                     android:gravity="center"/>
@@ -97,7 +97,7 @@
                         android:layout_rowWeight="1"
                         android:layout_margin="4dp"
                         app:cardCornerRadius="16dp"
-                        app:cardBackgroundColor="#F2D2BD">
+                        app:cardBackgroundColor="@color/mint">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -117,7 +117,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Focus Timer"
-                                android:textColor="#333333"
+                                android:textColor="@color/black"
                                 android:textSize="12sp"
                                 android:textStyle="bold"/>
                         </LinearLayout>
@@ -131,7 +131,7 @@
                         android:layout_rowWeight="1"
                         android:layout_margin="4dp"
                         app:cardCornerRadius="16dp"
-                        app:cardBackgroundColor="#F2D2BD">
+                        app:cardBackgroundColor="@color/mint">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -165,7 +165,7 @@
                         android:layout_rowWeight="1"
                         android:layout_margin="4dp"
                         app:cardCornerRadius="16dp"
-                        app:cardBackgroundColor="#F2D2BD">
+                        app:cardBackgroundColor="@color/mint">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -199,7 +199,7 @@
                         android:layout_rowWeight="1"
                         android:layout_margin="4dp"
                         app:cardCornerRadius="16dp"
-                        app:cardBackgroundColor="#F2D2BD">
+                        app:cardBackgroundColor="@color/mint">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -233,10 +233,10 @@
             android:id="@+id/btnGetStarted"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="🩷 Get Started"
+            android:text="Get Started 🩷"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:backgroundTint="#c93867"
+            android:backgroundTint="@color/navy"
             android:textColor="@color/white"
             android:padding="16dp"
             app:cornerRadius="24dp"/>

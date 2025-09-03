@@ -2,8 +2,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="#F2D2BD">
+    android:background="@color/green"
+    android:padding="16dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,90 +15,114 @@
             android:id="@+id/headerLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="13dp"
             android:gravity="center_vertical"
-            android:layout_marginBottom="13dp">
+            android:orientation="horizontal">
 
+            <!-- Back Button -->
             <Button
                 android:id="@+id/backButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="← back"
-                android:textColor="#9D174D"
-                android:background="@android:color/transparent"
-                android:onClick="showDashboard" />
+                android:backgroundTint="@color/navy"
+                android:text="Back"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
 
             <TextView
-                android:layout_marginTop="10dp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="How are you feeling today?"
-                android:textSize="16sp"
-                android:textColor="#9D174D"
                 android:gravity="center"
+                android:text="Mood Challenge"
+                android:textColor="@color/black"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
+            <!-- Logout Button -->
             <Button
                 android:id="@+id/logoutButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="⍈ Logout"
-                android:textColor="#9D174D"
-                android:background="@android:color/transparent" />
+                android:backgroundTint="@color/navy"
+                android:text="Logout"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="13dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="How are you feeling today?"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
         </LinearLayout>
 
         <!-- Emojis Row -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
                 android:text="😊"
-                android:textSize="28sp"
-                android:layout_margin="8dp" />
+                android:textSize="28sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
                 android:text="🎯"
-                android:textSize="28sp"
-                android:layout_margin="8dp" />
+                android:textSize="28sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
                 android:text="😢"
-                android:textSize="28sp"
-                android:layout_margin="8dp" />
+                android:textSize="28sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
                 android:text="😴"
-                android:textSize="28sp"
-                android:layout_margin="8dp" />
+                android:textSize="28sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
                 android:text="😔"
-                android:textSize="28sp"
-                android:layout_margin="8dp" />
+                android:textSize="28sp" />
         </LinearLayout>
 
         <!-- Reflection box -->
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Write a quick reflection about your day..."
+            android:layout_marginTop="8dp"
             android:background="@android:drawable/editbox_background"
-            android:padding="10dp"
-            android:layout_marginTop="8dp" />
+            android:backgroundTint="@color/mint"
+            android:hint="Write a quick reflection about your day..."
+            android:padding="10dp" />
 
         <!-- Save Check-in Button (centered) -->
         <Button
@@ -107,7 +131,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="12dp"
-            android:backgroundTint="#F06292"
+            android:backgroundTint="@color/navy"
             android:text="Save Check-in"
             android:textColor="@android:color/white" />
 
@@ -115,18 +139,18 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="#F8BBD0"
-            android:layout_marginVertical="16dp" />
+            android:layout_marginVertical="16dp"
+            android:background="#F8BBD0" />
 
         <!-- Relax Together Section -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
             android:text="Relax Together 🤝"
+            android:textColor="@color/black"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="#C2185B"
-            android:layout_marginBottom="12dp" />
+            android:textStyle="bold" />
 
         <!-- Group Activities -->
         <LinearLayout
@@ -138,26 +162,26 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="12dp"
+                android:layout_marginBottom="10dp"
                 android:background="@drawable/bg_round_white"
                 android:elevation="4dp"
-                android:layout_marginBottom="10dp">
+                android:orientation="horizontal"
+                android:padding="12dp">
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Breathing Circle\n12 students • 5 min session"
-                    android:textSize="14sp"
-                    android:textColor="#333333" />
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
 
                 <Button
                     android:id="@+id/btnBreathingCircle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/blue"
                     android:text="Join"
-                    android:backgroundTint="#2A9DF4"
                     android:textColor="@android:color/white" />
             </LinearLayout>
 
@@ -165,26 +189,26 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="12dp"
+                android:layout_marginBottom="10dp"
                 android:background="@drawable/bg_round_white"
                 android:elevation="4dp"
-                android:layout_marginBottom="10dp">
+                android:orientation="horizontal"
+                android:padding="12dp">
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Study Break Chat\n8 students • Active now"
-                    android:textSize="14sp"
-                    android:textColor="#333333" />
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
 
                 <Button
                     android:id="@+id/btnStudyBreakChat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/blue"
                     android:text="Join"
-                    android:backgroundTint="#22C55E"
                     android:textColor="@android:color/white" />
             </LinearLayout>
 
@@ -192,25 +216,25 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="12dp"
                 android:background="@drawable/bg_round_white"
-                android:elevation="4dp">
+                android:elevation="4dp"
+                android:orientation="horizontal"
+                android:padding="12dp">
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Mindful Stretching\n15 students • Starting in 3 min"
-                    android:textSize="14sp"
-                    android:textColor="#333333" />
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
 
                 <Button
                     android:id="@+id/btnMindfulStretching"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/blue"
                     android:text="Join"
-                    android:backgroundTint="#7F00FF"
                     android:textColor="@android:color/white" />
             </LinearLayout>
         </LinearLayout>
