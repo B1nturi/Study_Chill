@@ -14,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MoodChallenge extends AppCompatActivity {
 
-    private Button backButton, logoutButton;
+    private Button backButton, logoutButton, btnBreathingCircle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,7 @@ public class MoodChallenge extends AppCompatActivity {
 
         backButton = findViewById(R.id.backButton);
         logoutButton = findViewById(R.id.logoutButton);
+        btnBreathingCircle = findViewById(R.id.btnBreathingCircle);
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,6 +48,20 @@ public class MoodChallenge extends AppCompatActivity {
                 // startActivity(intent);
                 // finish();
                 Toast.makeText(MoodChallenge.this, "Logout button clicked (Not Implemented)", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btnBreathingCircle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Example: Go back or finish activity
+                // If you have a BreathCircle:
+                Intent i = new Intent(MoodChallenge.this, BreathCircle.class);
+                startActivity(i);
+                // finish(); // Optional
+                //Toast.makeText(TimerActivity.this, "Back button clicked", Toast.LENGTH_SHORT).show();
+                // If you just want to finish this activity:
+                // finish();
             }
         });
     }

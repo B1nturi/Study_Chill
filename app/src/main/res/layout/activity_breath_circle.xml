@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF5F8"
+    android:background="@color/green"
     android:padding="16dp">
 
     <!-- Header with Back and Logout -->
@@ -12,49 +12,53 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:layout_marginBottom="13dp">
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp">
 
+        <!-- Back Button -->
         <Button
             android:id="@+id/backButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="← back"
-            android:textColor="#9D174D"
-            android:background="@android:color/transparent"
-            android:onClick="showDashboard" />
+            android:text="Back"
+            android:backgroundTint="@color/navy"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
 
         <TextView
-            android:layout_marginTop="10dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="🧘‍♀️ Breathing Circle"
-            android:textSize="16sp"
-            android:textColor="#9D174D"
+            android:textSize="20dp"
             android:gravity="center"
+            android:text="Breathing Circle"
+            android:textColor="@color/black"
             android:textStyle="bold" />
 
+        <!-- Logout Button -->
         <Button
             android:id="@+id/logoutButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="⍈ Logout"
-            android:textColor="#9D174D"
-            android:background="@android:color/transparent" />
+            android:text="Logout"
+            android:backgroundTint="@color/navy"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
     </LinearLayout>
-
     <!-- Breathing Circle in the Center -->
     <FrameLayout
         android:id="@+id/circleContainer"
         android:layout_width="200dp"
         android:layout_height="200dp"
+        android:layout_marginBottom="70dp"
         android:layout_centerInParent="true">
 
         <View
             android:id="@+id/viewCircleOuter"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:background="@drawable/circle_outer" />
+            android:alpha="0.5"
+            android:background="@drawable/circle_inner" />
 
         <View
             android:id="@+id/viewCircleInner"
@@ -71,11 +75,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/circleContainer"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
         android:text="Breathe In..."
         android:textSize="18sp"
         android:textStyle="bold"
-        android:textColor="#AD1457" />
+        android:textColor="@color/black" />
 
     <!-- Participants Card -->
     <LinearLayout
@@ -86,7 +89,7 @@
         android:layout_marginTop="24dp"
         android:orientation="vertical"
         android:padding="12dp"
-        android:background="#FFF0F5"
+        android:background="@color/mint"
         android:clipToOutline="true">
 
         <TextView
@@ -117,7 +120,7 @@
         android:text="Start Breathing Exercise"
         android:textAllCaps="false"
         android:gravity="center"
-        android:backgroundTint="#E91E63"
+        android:backgroundTint="@color/navy"
         android:textColor="#FFFFFF" />
 
 </RelativeLayout>
