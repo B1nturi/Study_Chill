@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F2D2BD"
+    android:background="@color/green"
     android:padding="16dp">
 
     <!-- Header Section -->
@@ -11,33 +11,38 @@
         android:id="@+id/headerSection"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="15dp"
         android:gravity="center_vertical"
-        android:layout_marginBottom="12dp">
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_logo" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="🎧"
-            android:textSize="20sp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Study Chill"
-            android:textColor="#9D174D"
-            android:textSize="18sp"
-            android:textStyle="bold"
             android:layout_marginStart="8dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:text="Dashboard"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
+        <!-- Logout Button -->
         <Button
             android:id="@+id/logoutButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="⍈ Logout"
-            android:textColor="#9D174D"
-            android:background="@android:color/transparent"/>
+            android:text="Logout"
+            android:backgroundTint="@color/navy"
+            android:backgroundTintMode="screen"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+
     </LinearLayout>
 
     <TextView
@@ -46,11 +51,15 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/headerSection"
         android:layout_centerHorizontal="true"
-        android:text="Welcome to your study sanctuary! 🎵"
-        android:textColor="#DB2777"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        android:shadowColor="#55000000"
+        android:shadowDx="1"
+        android:shadowDy="2"
+        android:shadowRadius="6"
+        android:text="Welcome to Study Chill! 🎉"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
 
     <!-- Compact Dashboard Cards Grid -->
     <GridLayout
@@ -58,9 +67,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/welcomeText"
+        android:layout_marginBottom="12dp"
         android:columnCount="2"
-        android:rowCount="2"
-        android:layout_marginBottom="12dp">
+        android:rowCount="2">
 
 
         <!-- Focus Timer Card -->
@@ -68,72 +77,72 @@
             android:id="@+id/timerCard"
             android:layout_width="0dp"
             android:layout_height="80dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
             android:layout_margin="3dp"
-            app:cardCornerRadius="16dp"
-            app:cardBackgroundColor="#FFFFFF"
             android:clickable="true"
             android:focusable="true"
-            android:foreground="?attr/selectableItemBackground">
+            android:foreground="?attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/mint"
+            app:cardCornerRadius="16dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
                 android:gravity="center"
+                android:orientation="vertical"
                 android:padding="8dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="⏰"
-                    android:textSize="24sp"/>
+                    android:textSize="24sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Timer"
-                    android:textColor="#9D174D"
-                    android:textSize="12sp"
-                    android:textStyle="bold"/>
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <!-- Stats Card -->
         <androidx.cardview.widget.CardView
-            android:id="@+id/statsCardBtn"
+            android:id="@+id/statsCard"
             android:layout_width="0dp"
             android:layout_height="80dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
             android:layout_margin="3dp"
-            app:cardCornerRadius="16dp"
-            app:cardBackgroundColor="#FFFFFF"
             android:clickable="true"
             android:focusable="true"
-            android:foreground="?attr/selectableItemBackground">
+            android:foreground="?attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/mint"
+            app:cardCornerRadius="16dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
                 android:gravity="center"
+                android:orientation="vertical"
                 android:padding="8dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="📊"
-                    android:textSize="24sp"/>
+                    android:textSize="24sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Stats"
-                    android:textColor="#9D174D"
-                    android:textSize="12sp"
-                    android:textStyle="bold"/>
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -142,35 +151,35 @@
             android:id="@+id/moodCard"
             android:layout_width="0dp"
             android:layout_height="80dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
             android:layout_margin="3dp"
-            app:cardCornerRadius="16dp"
-            app:cardBackgroundColor="#FFFFFF"
             android:clickable="true"
             android:focusable="true"
-            android:foreground="?attr/selectableItemBackground">
+            android:foreground="?attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/mint"
+            app:cardCornerRadius="16dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
                 android:gravity="center"
+                android:orientation="vertical"
                 android:padding="8dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="💜"
-                    android:textSize="24sp"/>
+                    android:textSize="24sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Mood"
-                    android:textColor="#9D174D"
-                    android:textSize="12sp"
-                    android:textStyle="bold"/>
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -179,35 +188,35 @@
             android:id="@+id/musicCard"
             android:layout_width="0dp"
             android:layout_height="80dp"
-            android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
             android:layout_margin="3dp"
-            app:cardCornerRadius="16dp"
-            app:cardBackgroundColor="#FFFFFF"
             android:clickable="true"
             android:focusable="true"
-            android:foreground="?attr/selectableItemBackground">
+            android:foreground="?attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/mint"
+            app:cardCornerRadius="16dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
                 android:gravity="center"
+                android:orientation="vertical"
                 android:padding="8dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="🎵"
-                    android:textSize="24sp"/>
+                    android:textSize="24sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Music"
-                    android:textColor="#9D174D"
-                    android:textSize="12sp"
-                    android:textStyle="bold"/>
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -220,55 +229,55 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_below="@id/dashboardGrid"
-        app:cardCornerRadius="16dp"
-        app:cardBackgroundColor="#FFFFFF"
-        android:layout_marginBottom="8dp">
+        android:layout_marginBottom="8dp"
+        app:cardBackgroundColor="@color/mint"
+        app:cardCornerRadius="16dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
             android:gravity="center"
+            android:orientation="vertical"
             android:padding="8dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Today's Stats 🎶"
-                android:textColor="#9D174D"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="8dp"/>
+                android:layout_marginBottom="8dp"
+                android:text="Today's Stats 📈"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <!-- Sessions -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/sessionsCount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0"
-                        android:textColor="#9D174D"
+                        android:textColor="@color/black"
                         android:textSize="18sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Sessions"
-                        android:textColor="#DB2777"
-                        android:textSize="10sp"/>
+                        android:textColor="@color/red"
+                        android:textSize="12sp" />
                 </LinearLayout>
 
                 <!-- Focus Time -->
@@ -276,24 +285,24 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/focusTime"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0h"
-                        android:textColor="#9D174D"
+                        android:textColor="@color/black"
                         android:textSize="18sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Focus"
-                        android:textColor="#DB2777"
-                        android:textSize="10sp"/>
+                        android:textColor="@color/red"
+                        android:textSize="12sp" />
                 </LinearLayout>
 
                 <!-- Breaks -->
@@ -301,24 +310,24 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/relaxCount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0"
-                        android:textColor="#9D174D"
+                        android:textColor="@color/black"
                         android:textSize="18sp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Breaks"
-                        android:textColor="#DB2777"
-                        android:textSize="10sp"/>
+                        android:textColor="@color/red"
+                        android:textSize="12sp" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -329,8 +338,8 @@
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:layout_below="@id/statsCard"
-        app:cardCornerRadius="16dp"
-        app:cardBackgroundColor="#FFFFFF">
+        app:cardBackgroundColor="@color/mint"
+        app:cardCornerRadius="16dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -341,88 +350,88 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Recent Activity 🌙"
-                android:textColor="#9D174D"
-                android:textSize="14sp"
-                android:textStyle="bold"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="8dp"/>
+                android:layout_marginBottom="8dp"
+                android:text="Recent Activity 🌙"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <!-- Activity Item 1 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:orientation="horizontal"
                 android:gravity="center_vertical"
+                android:orientation="horizontal"
 
                 android:padding="8dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
                     android:text="🎧"
-                    android:textSize="16sp"
-                    android:layout_marginEnd="8dp"/>
+                    android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="25m Focus"
-                    android:textColor="#9D174D"
-                    android:textSize="12sp"
-                    android:textStyle="bold"/>
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <View
                     android:layout_width="0dp"
                     android:layout_height="1dp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2h ago"
-                    android:textColor="#DB2777"
-                    android:textSize="10sp"/>
+                    android:textColor="@color/red"
+                    android:textSize="12sp" />
             </LinearLayout>
 
             <!-- Activity Item 2 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:layout_marginTop="4dp"
                 android:layout_weight="1"
-                android:orientation="horizontal"
                 android:gravity="center_vertical"
 
-                android:padding="8dp"
-                android:layout_marginTop="4dp">
+                android:orientation="horizontal"
+                android:padding="8dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
                     android:text="😌"
-                    android:textSize="16sp"
-                    android:layout_marginEnd="8dp"/>
+                    android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Good Mood"
-                    android:textColor="#9D174D"
-                    android:textSize="12sp"
-                    android:textStyle="bold"/>
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <View
                     android:layout_width="0dp"
                     android:layout_height="1dp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="3h ago"
-                    android:textColor="#DB2777"
-                    android:textSize="10sp"/>
+                    android:textColor="@color/red"
+                    android:textSize="12sp" />
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>

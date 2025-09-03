@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    android:background="#F2D2BD">
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,26 +24,24 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:layout_marginBottom="13dp">
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp">
 
                 <!-- Back Button -->
                 <Button
                     android:id="@+id/backButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="← back"
-                    android:textStyle="bold"
-                    android:textColor="#9D174D"
-                    android:background="@android:color/transparent"
-                    android:onClick="showDashboard" />
+                    android:text="Back"
+                    android:backgroundTint="@color/navy"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
 
-                <!-- Title -->
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:textSize="24sp"
-                    android:textColor="#9D174D"
                     android:gravity="center"
                     android:textStyle="bold" />
 
@@ -52,10 +50,10 @@
                     android:id="@+id/logoutButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Logout ⍈"
-                    android:textStyle="bold"
-                    android:textColor="#C71585"
-                    android:background="@android:color/transparent" />
+                    android:text="Logout"
+                    android:backgroundTint="@color/navy"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <!-- Timer Card -->
@@ -63,13 +61,12 @@
                 android:id="@+id/timerCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="46dp"
+                android:layout_marginTop="70dp"
                 app:cardCornerRadius="24dp"
                 app:cardElevation="4dp"
-                app:cardBackgroundColor="#FFFFFF">
+                app:cardBackgroundColor="@color/mint">
 
                 <LinearLayout
-
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -80,8 +77,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="16dp"
                         android:gravity="center"
-                        android:text="⏰ Focus Timer"
-                        android:textColor="#9D174D"
+                        android:text="Focus Timer"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
                         android:textSize="20sp" />
 
                     <!-- Timer Circle -->
@@ -100,7 +98,7 @@
                             android:layout_height="200dp"
                             android:max="100"
                             android:progress="100"
-                            android:progressDrawable="@drawable/circle_background_pink"
+                            android:progressDrawable="@drawable/circle_background_white"
                             android:rotation="-90" />
 
                         <!-- Progress Circle -->
@@ -111,7 +109,7 @@
                             android:layout_height="200dp"
                             android:max="100"
                             android:progress="100"
-                            android:progressDrawable="@drawable/circle_progress_pink"
+                            android:progressDrawable="@drawable/circle_progress_green"
                             android:rotation="-90" />
 
                         <!-- Timer Text -->
@@ -127,7 +125,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="25:00"
-                                android:textColor="#9D174D"
+                                android:textColor="@color/black"
                                 android:textSize="36sp"
                                 android:textStyle="bold" />
 
@@ -135,8 +133,8 @@
                                 android:id="@+id/timerPhase"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Focus Time 🎵"
-                                android:textColor="#DB2777"
+                                android:text="Focus Time"
+                                android:textColor="@color/black"
                                 android:textSize="14sp" />
                         </LinearLayout>
                     </RelativeLayout>
@@ -155,7 +153,6 @@
                             android:layout_height="wrap_content"
                             android:layout_marginRight="8dp"
                             android:backgroundTint="#22C55E"
-                            android:onClick="startTimer"
                             android:paddingLeft="22dp"
                             android:paddingTop="12dp"
                             android:paddingRight="22dp"
@@ -164,34 +161,19 @@
                             android:textColor="#FFFFFF" />
 
                         <Button
-                            android:id="@+id/pauseBtn"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginRight="8dp"
-                            android:backgroundTint="#EAB308"
-                            android:onClick="pauseTimer"
-                            android:paddingLeft="22dp"
-                            android:paddingTop="12dp"
-                            android:paddingRight="22dp"
-                            android:paddingBottom="12dp"
-                            android:text=" || Pause"
-                            android:textColor="#FFFFFF" />
-
-                        <Button
                             android:id="@+id/resetBtn"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="8dp"
                             android:backgroundTint="#EF4444"
-                            android:onClick="resetTimer"
                             android:paddingLeft="22dp"
                             android:paddingTop="12dp"
                             android:paddingRight="22dp"
                             android:paddingBottom="12dp"
-                            android:text=" ↺ Reset"
+                            android:text="↺ Reset"
                             android:textColor="#FFFFFF"
-                            android:textSize="13sp" />
+                            android:textSize="13sp"
+                            android:enabled="true"/>
                     </LinearLayout>
 
                     <!-- Preset Buttons (centered) -->
@@ -206,9 +188,9 @@
                             android:id="@+id/preset25"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:backgroundTint="#F3F4F6"
+                            android:backgroundTint="@color/green"
                             android:text="25min"
-                            android:textColor="#374151"
+                            android:textColor="@color/black"
                             android:textSize="12sp" />
 
                         <Button
@@ -216,9 +198,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="6dp"
-                            android:backgroundTint="#F3F4F6"
+                            android:backgroundTint="@color/green"
                             android:text="45min"
-                            android:textColor="#374151"
+                            android:textColor="@color/black"
                             android:textSize="12sp" />
 
                         <Button
@@ -226,9 +208,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="6dp"
-                            android:backgroundTint="#F3F4F6"
+                            android:backgroundTint="@color/green"
                             android:text="60min"
-                            android:textColor="#374151"
+                            android:textColor="@color/black"
                             android:textSize="12sp" />
                     </LinearLayout>
 
@@ -239,9 +221,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="16dp"
-                        android:backgroundTint="#c93867"
-                        android:onClick="openMusicCard"
-                        android:text="♫ Play Music"
+                        android:backgroundTint="@color/navy"
+                        android:text="Play Music"
                         android:textColor="#FFFFFF" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -261,8 +242,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="🎵 Focus Music Player"
-                android:textColor="#C2185B"
+                android:text="Music Player"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginBottom="12dp"/>
@@ -296,14 +277,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Lo-fi Study Beats"
-                        android:textColor="#333333"
+                        android:textColor="@color/black"
                         android:textStyle="bold"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Relaxing Instrumental"
-                        android:textColor="#777777"
+                        android:textColor="@color/black"
                         android:textSize="12sp"/>
                 </LinearLayout>
             </LinearLayout>
@@ -312,51 +293,41 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:layout_marginBottom="12dp">
+                android:gravity="center"
+                android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/prevTrack"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/bg_round_white"
-                    android:text="⏮️"/>
+                <!-- Previous Button -->
+                <ImageButton
+                    android:id="@+id/previousButton"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/round_button_bg"
+                    android:contentDescription="Previous"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_skip_previous" />
 
-                <Button
-                    android:id="@+id/playPauseMusic"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:backgroundTint="#E91E63"
-                    android:text="▶️"
-                    android:textColor="@android:color/white"
-                    android:layout_marginHorizontal="8dp"/>
+                <!-- Play Button -->
+                <ImageButton
+                    android:id="@+id/playButton"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/round_button_accent_bg"
+                    android:contentDescription="Play"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_play_arrow" />
 
-                <Button
-                    android:id="@+id/nextTrack"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/bg_round_white"
-                    android:text="⏭️"/>
-
-                <!-- Progress Bar -->
-                <ProgressBar
-                    android:id="@+id/musicProgress"
-                    style="?android:attr/progressBarStyleHorizontal"
-                    android:layout_width="0dp"
-                    android:layout_height="8dp"
-                    android:layout_weight="1"
-                    android:progress="35"
-                    android:progressTint="#E91E63"
-                    android:backgroundTint="#E0E0E0"
-                    android:layout_marginHorizontal="10dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="2:45"
-                    android:textColor="#666666"
-                    android:textSize="12sp"/>
+                <!-- Next Button -->
+                <ImageButton
+                    android:id="@+id/nextButton"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/round_button_bg"
+                    android:contentDescription="Next"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_skip_next" />
             </LinearLayout>
 
             <!-- Volume -->
@@ -390,7 +361,7 @@
                 android:layout_height="wrap_content"
                 android:text="Study Playlists"
                 android:textStyle="bold"
-                android:textColor="#555555"
+                android:textColor="@color/black"
                 android:layout_marginBottom="8dp"/>
 
             <GridLayout
@@ -405,9 +376,9 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_columnWeight="1"
-                    android:backgroundTint="#F8BBD0"
+                    android:backgroundTint="@color/mint"
                     android:text="Lo-fi Beats\nChill and Focus"
-                    android:textColor="#333333"
+                    android:textColor="@color/black"
                     android:gravity="start"/>
 
                 <Button
@@ -415,9 +386,9 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_columnWeight="1"
-                    android:backgroundTint="#F8BBD0"
+                    android:backgroundTint="@color/mint"
                     android:text="Nature Sounds\nRain and Forest"
-                    android:textColor="#333333"
+                    android:textColor="@color/black"
                     android:gravity="start"/>
 
                 <Button
@@ -425,9 +396,9 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_columnWeight="1"
-                    android:backgroundTint="#F8BBD0"
+                    android:backgroundTint="@color/mint"
                     android:text="Classical\nPiano and Strings"
-                    android:textColor="#333333"
+                    android:textColor="@color/black"
                     android:gravity="start"/>
 
                 <Button
@@ -435,20 +406,20 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_columnWeight="1"
-                    android:backgroundTint="#F8BBD0"
+                    android:backgroundTint="@color/mint"
                     android:text="Ambient\nDeep Focus"
-                    android:textColor="#333333"
+                    android:textColor="@color/black"
                     android:gravity="start"/>
             </GridLayout>
 
             <!-- Close Button -->
             <Button
-                android:id="@+id/closeMusicPlayer"
+                android:id="@+id/closeMusicPlayerBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#E0E0E0"
+                android:backgroundTint="@color/navy"
                 android:text="Close Player"
-                android:textColor="#444444"
+                android:textColor="@color/white"
                 android:layout_marginTop="12dp"/>
         </LinearLayout>
     </LinearLayout>

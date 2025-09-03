@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<selector xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android" tools:ignore="StateListReachable">
 
     <!-- White Card -->
     <item android:id="@+id/bg_card">
         <shape android:shape="rectangle">
-            <solid android:color="#FFFFFF"/>
+            <solid android:color="@color/mint"/>
             <corners android:radius="20dp"/>
             <padding
                 android:left="8dp"
@@ -27,9 +27,9 @@
 
     <!-- Icon Background -->
     <item android:id="@+id/bg_icon">
-        <shape android:shape="rectangle">
-            <solid android:color="#F48FB1"/>
-            <corners android:radius="8dp"/>
+        <shape android:layout_width="wrap_content" android:layout_height="wrap_content" android:shape="rectangle">
+            <solid android:color="#F48FB1" />
+            <corners android:radius="8dp" />
         </shape>
     </item>
 

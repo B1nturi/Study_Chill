@@ -10,35 +10,41 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="16dp"
-        android:background="#F8E6E6"
-        android:gravity="center_vertical">
+        android:padding="30dp"
+        android:background="@color/green">
 
+        <!-- Back Button -->
         <Button
             android:id="@+id/backButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="← back"
-            android:textColor="#9D174D"
-            android:background="?attr/selectableItemBackgroundBorderless" />
+            android:backgroundTint="@color/navy"
+            android:text="Back"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"/>
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Focus Timer"
+            android:text="Music Player"
             android:textSize="20sp"
-            android:textColor="#9D174D"
+            android:textColor="@color/black"
             android:gravity="center"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"/>
 
+        <!-- Logout Button -->
         <Button
             android:id="@+id/logoutButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Logout ⍈"
-            android:textColor="#C71585"
-            android:background="?attr/selectableItemBackgroundBorderless" />
+            android:backgroundTint="@color/navy"
+            android:text="Logout"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"/>
     </LinearLayout>
 
     <!-- Player Section -->
@@ -47,7 +53,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="24dp"
-        android:background="@android:color/white"
+        android:background="@color/mint"
         android:gravity="center_horizontal">
 
         <TextView
@@ -108,40 +114,43 @@
 
         <!-- Player Controls -->
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <!-- Previous Button -->
-            <Button
+            <ImageButton
+                android:id="@+id/previousButton"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:text="⏮"
-                android:textSize="16sp"
-                android:textColor="#9D174D"
+                android:layout_margin="8dp"
                 android:background="@drawable/round_button_bg"
-                android:layout_margin="8dp" />
+                android:contentDescription="Previous"
+                android:scaleType="center"
+                android:src="@drawable/ic_skip_previous" />
 
             <!-- Play Button -->
-            <Button
+            <ImageButton
                 android:id="@+id/playButton"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
-                android:text="▶"
-                android:textSize="20sp"
-                android:textColor="#FFFFFF"
+                android:layout_margin="8dp"
                 android:background="@drawable/round_button_accent_bg"
-                android:layout_margin="8dp" />
+                android:contentDescription="Play"
+                android:scaleType="center"
+                android:src="@drawable/ic_play_arrow" />
 
             <!-- Next Button -->
-            <Button
+            <ImageButton
+                android:id="@+id/nextButton"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:text="⏭"
-                android:textSize="16sp"
-                android:textColor="#9D174D"
+                android:layout_margin="8dp"
                 android:background="@drawable/round_button_bg"
-                android:layout_margin="8dp" />
+                android:contentDescription="Next"
+                android:scaleType="center"
+                android:src="@drawable/ic_skip_next" />
         </LinearLayout>
     </LinearLayout>
 
@@ -152,7 +161,7 @@
         android:layout_weight="1"
         android:orientation="vertical"
         android:padding="16dp"
-        android:background="#FAFAFA">
+        android:background="@color/mint">
 
         <TextView
             android:layout_width="match_parent"
@@ -162,7 +171,7 @@
             android:textColor="#333333"
             android:textStyle="bold"
             android:padding="8dp"
-            android:background="#FFFFFF"
+            android:background="@color/mint"
             android:paddingLeft="12dp" />
 
         <!-- Playlist Item 1 -->
@@ -204,9 +213,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="32.4"
+                android:text="3:24"
                 android:textSize="12sp"
-                android:textColor="#888888"
+                android:textColor="@color/navy"
                 android:gravity="center_vertical" />
         </LinearLayout>
 
@@ -249,9 +258,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="412"
+                android:text="4:12"
                 android:textSize="12sp"
-                android:textColor="#888888"
+                android:textColor="@color/navy"
                 android:gravity="center_vertical" />
         </LinearLayout>
     </LinearLayout>
