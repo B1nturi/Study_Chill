@@ -48,7 +48,8 @@
         android:layout_centerHorizontal="true"
         android:text="Welcome to your study sanctuary! 🎵"
         android:textColor="#DB2777"
-        android:textSize="12sp"
+        android:textSize="14sp"
+        android:textStyle="bold"
         android:layout_marginBottom="16dp"/>
 
     <!-- Compact Dashboard Cards Grid -->
@@ -61,15 +62,20 @@
         android:rowCount="2"
         android:layout_marginBottom="12dp">
 
+
         <!-- Focus Timer Card -->
         <androidx.cardview.widget.CardView
+            android:id="@+id/timerCard"
             android:layout_width="0dp"
             android:layout_height="80dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:layout_margin="3dp"
             app:cardCornerRadius="16dp"
-            app:cardBackgroundColor="#FFFFFF">
+            app:cardBackgroundColor="#FFFFFF"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -96,13 +102,17 @@
 
         <!-- Stats Card -->
         <androidx.cardview.widget.CardView
+            android:id="@+id/statsCardBtn"
             android:layout_width="0dp"
             android:layout_height="80dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:layout_margin="3dp"
             app:cardCornerRadius="16dp"
-            app:cardBackgroundColor="#FFFFFF">
+            app:cardBackgroundColor="#FFFFFF"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -129,13 +139,17 @@
 
         <!-- Mood Card -->
         <androidx.cardview.widget.CardView
+            android:id="@+id/moodCard"
             android:layout_width="0dp"
             android:layout_height="80dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:layout_margin="3dp"
             app:cardCornerRadius="16dp"
-            app:cardBackgroundColor="#FFFFFF">
+            app:cardBackgroundColor="#FFFFFF"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -162,13 +176,17 @@
 
         <!-- Music Card -->
         <androidx.cardview.widget.CardView
+            android:id="@+id/musicCard"
             android:layout_width="0dp"
             android:layout_height="80dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:layout_margin="3dp"
             app:cardCornerRadius="16dp"
-            app:cardBackgroundColor="#FFFFFF">
+            app:cardBackgroundColor="#FFFFFF"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -192,6 +210,8 @@
                     android:textStyle="bold"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
+
     </GridLayout>
 
     <!-- Combined Stats Card -->
@@ -342,7 +362,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="🎧"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:layout_marginEnd="8dp"/>
 
                 <TextView
@@ -381,7 +401,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="😌"
-                    android:textSize="18sp"
+                    android:textSize="16sp"
                     android:layout_marginEnd="8dp"/>
 
                 <TextView

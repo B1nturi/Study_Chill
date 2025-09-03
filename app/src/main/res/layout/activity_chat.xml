@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2D2BD"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="13dp">
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="← back"
+            android:textColor="#9D174D"
+            android:background="@android:color/transparent"
+            android:onClick="showDashboard" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Study Break Chat"
+            android:textSize="16sp"
+            android:textColor="#9D174D"
+            android:gravity="center"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⍈ Logout"
+            android:textColor="#9D174D"
+            android:background="@android:color/transparent" />
+    </LinearLayout>
+
+
+    <!-- Chat Box -->
+    <LinearLayout
+        android:id="@+id/chatBox"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@drawable/bg_chat_box"
+        android:padding="12dp"
+        android:layout_marginTop="8dp">
+
+        <!-- Example Messages -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sarah • 2 min ago\nJust finished a 45-min study session! Feeling great 💪"
+            android:padding="8dp"
+            android:background="@drawable/bg_message"
+            android:textColor="#000000"
+            android:layout_marginBottom="6dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mike • 1 min ago\nAnyone else struggling with calculus? 🤓"
+            android:padding="8dp"
+            android:background="@drawable/bg_message"
+            android:textColor="#000000"
+            android:layout_marginBottom="6dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Emma • 30 sec ago\n@Mike I can help! Just took my calc exam yesterday"
+            android:padding="8dp"
+            android:background="@drawable/bg_message"
+            android:textColor="#000000"/>
+    </LinearLayout>
+
+    <!-- Message Input Area -->
+    <LinearLayout
+        android:id="@+id/messageInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="6dp">
+
+        <EditText
+            android:id="@+id/etMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Type your message..."
+            android:background="@drawable/bg_edittext"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textColorHint="#888888" />
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="6dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

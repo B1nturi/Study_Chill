@@ -12,6 +12,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StudyChill">
         <activity
+            android:name=".Player"
+            android:exported="false" />
+        <activity
+            android:name=".Music"
+            android:exported="false" />
+        <activity
+            android:name=".Progress"
+            android:exported="false" />
+        <activity
+            android:name=".Stretching"
+            android:exported="false" />
+        <activity
+            android:name=".chat"
+            android:exported="false" />
+        <activity
+            android:name=".BreathCircle"
+            android:exported="false" />
+        <activity
+            android:name=".MoodChallenge"
+            android:exported="false" />
+        <activity
             android:name=".TimerActivity"
             android:exported="false" />
         <activity
@@ -28,6 +49,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
