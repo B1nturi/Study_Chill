@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- White Card -->
+    <item android:id="@+id/bg_card">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF"/>
+            <corners android:radius="20dp"/>
+            <padding
+                android:left="8dp"
+                android:top="8dp"
+                android:right="8dp"
+                android:bottom="8dp"/>
+        </shape>
+    </item>
+
+    <!-- Gradient Card -->
+    <item android:id="@+id/bg_gradient_card">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#F8BBD0"
+                android:endColor="#FCE4EC"
+                android:angle="45"/>
+            <corners android:radius="12dp"/>
+        </shape>
+    </item>
+
+    <!-- Icon Background -->
+    <item android:id="@+id/bg_icon">
+        <shape android:shape="rectangle">
+            <solid android:color="#F48FB1"/>
+            <corners android:radius="8dp"/>
+        </shape>
+    </item>
+
+    <!-- Round White -->
+    <item android:id="@+id/bg_round_white">
+        <shape android:shape="oval">
+            <solid android:color="#FFFFFF"/>
+        </shape>
+    </item>
+
+</selector>
