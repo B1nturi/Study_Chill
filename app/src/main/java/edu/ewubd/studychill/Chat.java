@@ -6,30 +6,26 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-public class Stretching extends AppCompatActivity {
+public class Chat extends AppCompatActivity {
 
-    private Button backButton, logoutButton, readyStretching;
+    private Button backButton, logoutButton, btnSend;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_stretching);
+        setContentView(R.layout.activity_chat);
 
         backButton = findViewById(R.id.backButton);
         logoutButton = findViewById(R.id.logoutButton);
-        readyStretching = findViewById(R.id.readyStretching);
+        btnSend = findViewById(R.id.btnSend);
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Example: Go back or finish activity
-                Intent i = new Intent(Stretching.this, MoodChallenge.class);
+                Intent i = new Intent(Chat.this, MoodChallenge.class);
                 startActivity(i);
                 // finish(); // Optional
                 //Toast.makeText(TimerActivity.this, "Back button clicked", Toast.LENGTH_SHORT).show();
@@ -46,11 +42,11 @@ public class Stretching extends AppCompatActivity {
                 // intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK); // Clear back stack
                 // startActivity(intent);
                 // finish();
-                Toast.makeText(Stretching.this, "Logout button clicked (Not Implemented)", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Chat.this, "Logout button clicked (Not Implemented)", Toast.LENGTH_SHORT).show();
             }
         });
 
-        readyStretching.setOnClickListener(new View.OnClickListener() {
+        btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Example: Implement logout logic
@@ -58,7 +54,7 @@ public class Stretching extends AppCompatActivity {
                 // intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK); // Clear back stack
                 // startActivity(intent);
                 // finish();
-                Toast.makeText(Stretching.this, "Ready button clicked (Not Implemented)", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Chat.this, "Send button clicked (Not Implemented)", Toast.LENGTH_SHORT).show();
             }
         });
     }

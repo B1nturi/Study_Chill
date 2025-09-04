@@ -2,44 +2,46 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F2D2BD"
+    android:background="@color/mint"
     android:padding="12dp">
 
     <LinearLayout
-        android:id="@+id/headerLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:layout_marginBottom="13dp">
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="15dp">
 
+        <!-- Back Button -->
         <Button
             android:id="@+id/backButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="← back"
-            android:textColor="#9D174D"
-            android:background="@android:color/transparent"
-            android:onClick="showDashboard" />
+            android:text="Back"
+            android:backgroundTint="@color/navy"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
 
         <TextView
-            android:layout_marginTop="10dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Study Break Chat"
             android:textSize="16sp"
-            android:textColor="#9D174D"
+            android:textStyle="bold"
             android:gravity="center"
-            android:textStyle="bold" />
+            android:textColor="@color/black"/>
 
+        <!-- Logout Button -->
         <Button
             android:id="@+id/logoutButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="⍈ Logout"
-            android:textColor="#9D174D"
-            android:background="@android:color/transparent" />
+            android:text="Logout"
+            android:backgroundTint="@color/navy"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
     </LinearLayout>
 
 
@@ -107,8 +109,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Send"
-            android:backgroundTint="#4CAF50"
-            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/navy"
+            android:textColor="@color/white"
             android:layout_marginLeft="6dp"/>
     </LinearLayout>
 
