@@ -42,8 +42,9 @@ public class DashboardActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                // Navigate to StatsActivity
-                Toast.makeText(DashboardActivity.this, "Stats card clicked (Not Implemented)", Toast.LENGTH_SHORT).show();
+                // Navigate to Progress
+                Intent i = new Intent(DashboardActivity.this, Progress.class);
+                startActivity(i);
             }
         });
 

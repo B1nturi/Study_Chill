@@ -14,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MoodChallenge extends AppCompatActivity {
 
-    private Button backButton, logoutButton, btnBreathingCircle;
+    private Button backButton, logoutButton, btnBreathingCircle, btnMindfulStretching, btnStudyBreakChat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +24,8 @@ public class MoodChallenge extends AppCompatActivity {
         backButton = findViewById(R.id.backButton);
         logoutButton = findViewById(R.id.logoutButton);
         btnBreathingCircle = findViewById(R.id.btnBreathingCircle);
+        btnMindfulStretching = findViewById(R.id.btnMindfulStretching);
+        btnStudyBreakChat = findViewById(R.id.btnStudyBreakChat);
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +59,32 @@ public class MoodChallenge extends AppCompatActivity {
                 // Example: Go back or finish activity
                 // If you have a BreathCircle:
                 Intent i = new Intent(MoodChallenge.this, BreathCircle.class);
+                startActivity(i);
+                // finish(); // Optional
+                //Toast.makeText(TimerActivity.this, "Back button clicked", Toast.LENGTH_SHORT).show();
+                // If you just want to finish this activity:
+                // finish();
+            }
+        });
+
+        btnMindfulStretching.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Example: Go back or finish activity
+                Intent i = new Intent(MoodChallenge.this, Stretching.class);
+                startActivity(i);
+                // finish(); // Optional
+                //Toast.makeText(TimerActivity.this, "Back button clicked", Toast.LENGTH_SHORT).show();
+                // If you just want to finish this activity:
+                // finish();
+            }
+        });
+
+        btnStudyBreakChat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Example: Go back or finish activity
+                Intent i = new Intent(MoodChallenge.this, Chat.class);
                 startActivity(i);
                 // finish(); // Optional
                 //Toast.makeText(TimerActivity.this, "Back button clicked", Toast.LENGTH_SHORT).show();

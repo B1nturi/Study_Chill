@@ -3,16 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:background="#F2D2BD">
+    android:background="@color/green">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="#FFFFFF"
+        android:background="@color/green"
         android:padding="18dp"
         android:elevation="4dp"
-        android:layout_marginTop="35dp"
         android:clipToOutline="true">
 
         <!-- Header with Back + Title + Logout -->
@@ -21,35 +20,38 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:layout_marginBottom="16dp">
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="15dp">
 
+            <!-- Back Button -->
             <Button
                 android:id="@+id/backButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="← Back"
-                android:textStyle="bold"
-                android:textColor="#C71585"
-                android:background="@android:color/transparent" />
+                android:text="Back"
+                android:backgroundTint="@color/navy"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="📈 Your Progress"
+                android:text="Your Progress"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:gravity="center"
-                android:textColor="#C71585" />
+                android:textColor="@color/black"/>
 
+            <!-- Logout Button -->
             <Button
                 android:id="@+id/logoutButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Logout ⍈"
-                android:textStyle="bold"
-                android:textColor="#C71585"
-                android:background="@android:color/transparent" />
+                android:text="Logout"
+                android:backgroundTint="@color/navy"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <!-- Points & Sessions -->
@@ -63,15 +65,15 @@
                 android:id="@+id/studyPoints"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
                 android:layout_weight="1"
-                android:text="127\nStudy Points"
+                android:background="@color/mint"
                 android:gravity="center"
-                android:textColor="#8B1C62"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:background="#FFDDEE"
                 android:padding="12dp"
-                android:layout_marginEnd="8dp" />
+                android:text="127\nStudy Points"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/sessionsToday"
@@ -80,10 +82,10 @@
                 android:layout_weight="1"
                 android:text="23\nSessions Today"
                 android:gravity="center"
-                android:textColor="#8B1C62"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textSize="18sp"
-                android:background="#FFDDEE"
+                android:background="@color/mint"
                 android:padding="12dp"
                 android:layout_marginStart="8dp" />
         </LinearLayout>
@@ -93,7 +95,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="#FFEAF5"
+            android:background="@color/mint"
             android:padding="12dp"
             android:layout_marginBottom="16dp">
 
@@ -103,7 +105,7 @@
                 android:text="🔥 Study Streak"
                 android:textSize="14sp"
                 android:textStyle="bold"
-                android:textColor="#C71585"
+                android:textColor="@color/black"
                 android:layout_marginBottom="4dp" />
 
             <TextView
@@ -124,7 +126,7 @@
                 android:progress="70"
                 android:max="100"
                 android:progressTint="#C71585"
-                android:backgroundTint="#FFDDEE" />
+                android:backgroundTint="@color/mint" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -141,7 +143,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="#FFDDEE"
+            android:background="@color/mint"
             android:padding="12dp">
 
             <TextView

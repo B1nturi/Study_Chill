@@ -24,7 +24,7 @@
             android:name=".Stretching"
             android:exported="false" />
         <activity
-            android:name=".chat"
+            android:name=".Chat"
             android:exported="false" />
         <activity
             android:name=".BreathCircle"
