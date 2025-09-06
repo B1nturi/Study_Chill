@@ -50,7 +50,7 @@ Contributions are welcome! To contribute:
 
 ## License
 
-This project is licensed under the MIT License.
+[This project is licensed under the MIT License.](https://github.com/B1nturi/Study_Chill/blob/500637643be4bdd3aee627d1d11e05d8f9e21717/LICENSE)
 
 ## Author
 
