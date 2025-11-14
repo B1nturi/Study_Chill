@@ -56,6 +56,7 @@ Contributions are welcome! To contribute:
 
 - [Jubayer Alam Likhon](https://github.com/B1nturi)
 - [Afrida Tasnim Easha](https://github.com/Afrida0711)
+- [Md Asadullah Asad](https://github.com/AsadullaAsad)
 
 ---
 
